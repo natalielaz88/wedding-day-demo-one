@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<!--Технический блок. Здесь можно изменить заголовок сайта.
+"Свадебное приглашение" можно заменить на свой текст.-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Свадебное приглашение</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+
+<body>
+
+  <!-- Шапка. Здесь можно заменить текст на свой (заголовок, основной текст и дату). -->
+  <section class="hero">
+    <h1>Анна & Павел</h1>
+
+    <div class="hero-text">
+      <hr class="decor-line">
+
+      <p>Приглашаем Вас на торжество,<br>посвященное нашему бракосочетанию</p>
+      <p>10 сентября 2025</p>
+      <hr class="decor-line">
+      <div id="hero-countdown" class="countdown" aria-label="Счётчик до события">
+        <div class="countdown-grid">
+          <div class="tile">
+            <span class="num" id="cd-days">00</span>
+            <span class="label" id="lb-days">дней</span>
+          </div>
+          <div class="sep">:</div>
+          <div class="tile">
+            <span class="num" id="cd-hours">00</span>
+            <span class="label" id="lb-hours">часов</span>
+          </div>
+          <div class="sep">:</div>
+          <div class="tile">
+            <span class="num" id="cd-mins">00</span>
+            <span class="label" id="lb-mins">минут</span>
+          </div>
+          <div class="sep">:</div>
+          <div class="tile">
+            <span class="num" id="cd-secs">00</span>
+            <span class="label" id="lb-secs">секунд</span>
+          </div>
+        </div>
+        <div class="countdown-note" id="cd-note" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <a href="#details" class="btn">Подробнее</a>
+  </section>
+
+  <!--История пары. Здесь можно изменить текст (заголовок после "<h2>", текст после "<p>"),
+  а также заменить фото на свои.-->
+  <section id="about" class="about">
+    <h2>Вместе навсегда</h2>
+    <p>Наша история – это история любви, верности и счастья.</p>
+    <p>Мы с нетерпением ждем возможности разделить этот день с вами и начать новую главу вместе!
+    </p>
+    <!--Заменить ниже фото "img/photo1.jpg" на свои.-->
+    <img src="img/photo1.jpg" tabindex="0" height="200" alt="Фото 1" loading="lazy">
+    <img src="img/photo2.jpg" tabindex="0" height="200" alt="Фото 2" loading="lazy">
+    <img src="img/photo3.jpg" tabindex="0" height="200" alt="Фото 3" loading="lazy">
+    <img src="img/photo4.jpg" tabindex="0" height="200" alt="Фото 4" loading="lazy">
+    <img src="img/photo5.jpg" tabindex="0" height="200" alt="Фото 5" loading="lazy">
+    <img src="img/photo6.jpg" tabindex="0" height="200" alt="Фото 6" loading="lazy">
+  </section>
+
+  <!-- Детали торжества. Здесь можно изменить текст и заголовки. 
+  А также время и адреса. -->
+  <section id="details" class="details">
+    <h2>Детали торжества</h2>
+    <hr class="decor-line">
+    <div class="details-container">
+      <div class="detail-item">
+        <h3>Регистрация</h3>
+        <p>15:00 — ЗАГС, ул. Пушкина, 15</p>
+        <p>Просим приехать за 10 минут до начала</p>
+        <a href="https://maps.google.com/?q=ул.+Пушкина,+15" target="_blank" class="btn">Открыть на карте</a>
+      </div>
+      <div class="detail-item">
+        <h3>Праздник</h3>
+        <p>18:00 — Ресторан "Олива"</p>
+        <p>ул. Центральная, 5</p>
+        <a href="https://maps.google.com/?q=ул.+Центральная,+5" target="_blank" class="btn">Открыть на карте</a>
+      </div>
+      <div class="detail-item">
+        <h3>Дресс-код</h3>
+        <p>
+          Мы будем рады, если вы поддержите цветовую палитру праздника:</p>
+        <div class="color-palette">
+          <span class="color-circle" style="background-color: #8C9B74;" title="Оливковый"></span>
+          <span class="color-circle" style="background-color: #D4AF37;" title="Золотистый"></span>
+          <span class="color-circle" style="background-color: #F5F5DC;" title="Кремовый"></span>
+        </div>
+      </div>
+      <div class="detail-item">
+        <h3>Программа дня</h3>
+
+        <ul class="program-list">
+          <li>14:00 — Сбор гостей</li>
+          <li>15:00 — Регистрация в ЗАГСе</li>
+          <li>16:30 — Фотосессия</li>
+          <li>18:00 — Ужин и праздник</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!--Форма подтверждения. Здесь нужно заменить "xxxxxxxx" 
+  в строке "https://formspree.io/f/xxxxxxxx" на свой профиль. -->
+  <section id="rsvp" class="rsvp-section">
+    <h2>Подтвердите своё присутствие</h2>
+    <p>Пожалуйста, заполните форму до 1 сентября</p>
+
+    <!-- ЗАМЕНИ action на свой Formspree endpoint -->
+    <form class="rsvp-form" action="https://formspree.io/f/xkgzyrad" method="POST" novalidate>
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Ваш email" required>
+      </div>
+
+      <input type="number" name="guests" placeholder="Количество гостей" min="0" required>
+
+      <select name="attendance" required>
+        <option value="">Вы планируете присутствовать?</option>
+        <option value="Да">Да, буду</option>
+        <option value="Нет">К сожалению, не смогу</option>
+      </select>
+
+      <textarea name="message" placeholder="Комментарий (необязательно)"></textarea>
+
+      <!-- антиспам -->
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_subject" value="RSVP с сайта">
+
+      <button type="submit" class="btn">Отправить</button>
+      <p class="rsvp-status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- Подвал. Замени номер телефона на свой. 
+  В адресе "https://maps.google.com" можно указать свой адрес через "/"". -->
+  <footer class="footer">
+    <p>Связаться с нами: <a href="tel:+79110000000">+7 (911) 000 00 00</a></p>
+    <p><a href="https://maps.google.com" target="_blank">Как добраться</a></p>
+  </footer>
+
+  <script src="js/send-form.js"></script>
+  <script src="js/counter.js"></script>
+
+</body>
+
+</html>
